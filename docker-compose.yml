@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  angular-image:
+    build: .
+    container_name: angular-image
+    privileged: true
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./:/tutorialDocker:z
+    tty: true
+    stdin_open: true
+    network_mode: host
